@@ -62,34 +62,32 @@ class AppTheme {
   // *****************
 
   static final ThemeData lightTheme = ThemeData(
-    scaffoldBackgroundColor: _lightPrimaryColor,
-    appBarTheme: const AppBarTheme(
-      color: _appbarColorLight,
-      iconTheme: IconThemeData(color: _iconColor),
-    ),
-    bottomAppBarTheme: BottomAppBarTheme(color: _appbarColorLight),
-    colorScheme: ColorScheme.light(
-      primary: _lightPrimaryColor,
-      onPrimary: _lightOnPrimaryColor,
-      secondary: _accentColor,
-      primaryContainer: _lightPrimaryVariantColor,
-    ),
-    textTheme: _lightTextTheme,
-  );
+      scaffoldBackgroundColor: _lightPrimaryColor,
+      appBarTheme: const AppBarTheme(
+        color: _appbarColorLight,
+        iconTheme: IconThemeData(color: _iconColor),
+      ),
+      bottomAppBarTheme: BottomAppBarTheme(color: _appbarColorLight),
+      colorScheme: ColorScheme.light(
+        primary: _lightPrimaryColor,
+        onPrimary: _lightOnPrimaryColor,
+        secondary: _accentColor,
+        primaryContainer: _lightPrimaryVariantColor,
+      ),
+      textTheme: _lightTextTheme);
 
   static final ThemeData darkTheme = ThemeData(
-    scaffoldBackgroundColor: _darkPrimaryColor,
-    appBarTheme: AppBarTheme(
-      color: _appbarColorDark,
-      iconTheme: const IconThemeData(color: _iconColor),
-    ),
-    bottomAppBarTheme: BottomAppBarTheme(color: _appbarColorDark),
-    colorScheme: ColorScheme.dark(
-      primary: _darkPrimaryColor,
-      secondary: _accentColor,
-      onPrimary: _darkOnPrimaryColor,
-      primaryContainer: _darkPrimaryVariantColor,
-    ),
-    textTheme: _darkTextTheme,
-  );
+      scaffoldBackgroundColor: _darkPrimaryColor,
+      appBarTheme: AppBarTheme(
+        color: _appbarColorDark,
+        iconTheme: const IconThemeData(color: _iconColor),
+      ),
+      bottomAppBarTheme: BottomAppBarTheme(color: _appbarColorDark),
+      colorScheme: ColorScheme.dark(
+        primary: _darkPrimaryColor,
+        secondary: _accentColor,
+        onPrimary: _darkOnPrimaryColor,
+        primaryContainer: _darkPrimaryVariantColor,
+      ),
+      textTheme: _darkTextTheme);
 }
