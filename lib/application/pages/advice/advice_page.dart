@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 import '../../core/services/theme_service.dart';
-import 'bloc/advisor_bloc.dart';
+import 'cubit/advisor_cubit.dart';
 import 'widgets/advice_field.dart';
 import 'widgets/custom_button.dart';
 import 'widgets/error_message.dart';
@@ -13,8 +13,8 @@ class AdvisorPageWrapperProvider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<AdvisorBloc>(
-      create: (BuildContext context) => AdvisorBloc(),
+    return BlocProvider<AdvisorCubit>(
+      create: (BuildContext context) => AdvisorCubit(),
       child: const AdvisorPage(),
     );
   }
@@ -49,8 +49,8 @@ class AdvisorPage extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: Center(
-                child: BlocBuilder<AdvisorBloc, AdvisorState>(
-                  builder: (BuildContext context, AdvisorState state) {
+                child: BlocBuilder<AdvisorCubit, AdvisorCubitState>(
+                  builder: (BuildContext context, AdvisorCubitState state) {
                     if (state is AdvisorInitial) {
                       return Text(
                         'Your advice is waiting for you!',
