@@ -7,7 +7,7 @@ import 'theme.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
+    ChangeNotifierProvider<ThemeService>(
       create: (BuildContext context) => ThemeService(),
       child: const MyApp(),
     ),
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         themeMode: themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
-        home: const AdvicePage(),
+        home: const AdvisorPageWrapperProvider(),
       );
     });
   }
