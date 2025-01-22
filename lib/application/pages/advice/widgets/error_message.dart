@@ -10,7 +10,7 @@ class ErrorMessage extends StatelessWidget {
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: <Widget>[
         const Icon(Icons.error, size: 40, color: Colors.redAccent),
         const SizedBox(height: 20),
         Text(

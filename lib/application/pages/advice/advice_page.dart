@@ -19,7 +19,7 @@ class AdvicePage extends StatelessWidget {
           style: themeData.textTheme.headlineLarge,
         ),
         centerTitle: true,
-        actions: [
+        actions: <Widget>[
           Switch(
             value: Provider.of<ThemeService>(context).isDarkModeOn,
             onChanged: (_) =>
@@ -31,7 +31,7 @@ class AdvicePage extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 50.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: <Widget>[
             Expanded(
               child: Center(
                 child: ErrorMessage(message: 'Ooops something went wrong!'),
